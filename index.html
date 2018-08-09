@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zulo</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div id="loader-wrapper"> 
+        <div class="container">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </div>
+        <svg>
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div> 
+
+	<div class="l-pad header-body" >
+		<div class="header1 header-visible" data-id="header1">
+			<h1>Selamat Datang</h1>
+		</div>
+		
+		<div class="header2" >
+			
+			<div class="header-wording" data-id="header2">
+				<h1>Zulfathly Kamarol Zaman</h1>
+			</div>
+
+			<div class="social-media">
+				<div class="btn-align center">
+					<div class="btn btn-animate" data-id="icon-visible">
+						<a href="https://twitter.com/zulfathly" target="_blank">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</div>
+					<div class="btn btn-animate" data-id="icon-visible">
+						<a href="https://www.facebook.com/zulfathlykamarolzaman" target="_blank">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					</div>
+					<div class="btn btn-animate" data-id="icon-visible">
+						<a href="https://www.linkedin.com/in/zulfathly-kamarol-zaman-440409115/" target="_blank">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+					</div>
+
+				</div>
+				<span class="follow-me cf" data-id="icon-visible"><h3>Follow me.</h3></span>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="l-pad-content content-body">
+		<div class="header1-eng" data-id="header1-eng">
+			<h1>Welcome</h1>
+		</div>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet,At vero eos et accusam et justo duo dolores et ea rebum.  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  Lorem ipsum dolor sit amet,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit amet,
+			</p>  
+
+			<p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr,  At vero eos et accusam et justo duo dolores et ea rebum.  Stet clita kasd gubergren,  Lorem ipsum dolor sit amet,  Stet clita kasd gubergren,  Lorem ipsum dolor sit amet,  sed diam voluptua.
+			</p>  
+
+			<p>Lorem ipsum dolor sit amet,no sea takimata sanctus est Lorem ipsum dolor sit amet.  At vero eos et accusam et justo duo dolores et ea rebum.  sed diam voluptua.  consetetur sadipscing elitr,  sed diam voluptua.  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  consetetur sadipscing elitr,
+			</p>
+		</div>
+	</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

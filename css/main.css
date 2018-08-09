@@ -1,0 +1,598 @@
+/* =========================================================
+ * Base styles that apply only to generic element selectors
+ * =========================================================*/
+ body, *, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    height: 100%;
+
+}
+
+h1 {
+    font-size: 5em;
+    line-height: 1em;
+     padding-bottom: 1rem;
+     font-weight: 700;
+}
+
+h2 {
+    font-size: 1.4em;
+    line-height: 1em;
+}
+h3{
+	font-size:1.2em;
+}
+
+p{
+	display: block;
+	text-align: justify;
+}
+
+/* =========================================================
+ * Style classes starting with "l-" refer to "layout" components
+ * (grouping concepts that affect layout, width and margins)
+ * =========================================================*/
+.l-pad {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+	.l-pad-content {
+    padding-left:1em;
+    padding-right: 1em;
+	}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+
+/* =========================================================
+ * Modular and reusable styles SMALL SCREEN - Device <900px
+ * =========================================================*/
+.header-body{
+    display: block;
+    height: 200vh;
+    background-color: white;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+
+}
+.header1{
+    display: block;
+    margin:auto;
+    width:100%;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+    .header1 > h1{
+        position: absolute;
+        padding: 3rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+.header2{
+    width: 100%;
+    height: 100vh;
+    display: relative;
+    
+}
+    .header-wording{
+        width: 100%;
+        height: 100vh;
+        display: block;
+        position: relative;       
+    }
+    .header-wording > h1{
+        position: absolute;
+        padding: 3rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;        
+    }
+
+.social-media{
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:70%;
+    height: 70px;
+    margin: 0;
+}
+    .btn-align{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+        
+
+    .btn{
+        position: relative;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        line-height: 64px;
+        transition: all 0.3s;
+        span {
+           transition: all 0.3s;
+           tranform: scale(1, 1);
+        }
+    }
+    .btn::before, .btn::after {
+        content: '';
+        position: absolute;
+        transition: all 0.3s;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        }
+    .btn > a{
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0%);
+    }
+    
+
+.btn-animate::before {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1, 0.1);
+}
+
+.btn-animate:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.btn-animate::after {
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.btn-animate:hover::after {
+  transform: scale(1, .1);
+  opacity: 0;
+}
+    
+
+.content-body{
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    position: block;
+    padding: 0;
+    right: 0%;
+}
+.header1-eng{
+    position: fixed;
+    top:30%;
+    right: 0%;
+}
+    .header1-eng > h1{
+        color: #f4f4f4;
+        position: relative;
+        display: block;
+        text-align: center;
+        padding-right: 5rem;
+        padding-top: 3rem;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .content{
+        padding-top: 3em;
+        padding-bottom: 15%;
+    }
+    .content > p{
+        position: relative;
+        color: #7e7e7e;
+        padding-left:3em;
+        padding-right:3em;
+    }
+
+.follow-me{
+        visibility: hidden;
+}
+    .follow-me > h3{
+        color: #2e2e2e;
+        text-align: center;
+    }
+.cf{
+    overflow: hidden;
+}
+
+/* =========================================================
+ * Modular and reusable styles LARGE SCREEN
+ * =========================================================*/
+@media (min-width: 900px) {
+.header-body{
+    display: block;
+    width:50%;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+
+}
+.header1{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+    .header1 > h1{
+        position: relative;
+        display: block;
+        text-align: center;
+        padding: 3rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+
+    }
+
+.header2{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+    
+    .header-wording > h1{
+        display: block;
+        text-align: center;
+        padding: 3rem 3rem 0rem 3rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .header-visible, .header-visible > h1{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .icon-visible, .icon-visible > a,.icon-visible > h3{
+        visibility: visible;
+    }
+
+.social-media{
+    display: inline-block;
+    position: absolute;
+    bottom: 3.5em;
+    width:70%;
+    height: 70px;
+    background-color: white;
+    visibility: hidden; 
+
+    
+}
+    .btn-align{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+        
+
+    .btn{
+        position: relative;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        line-height: 64px;
+        transition: all 0.3s;
+        span {
+           transition: all 0.3s;
+           tranform: scale(1, 1);
+        }
+    }
+    .btn::before, .btn::after {
+        content: '';
+        position: absolute;
+        transition: all 0.3s;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        }
+    .btn > a{
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0%);
+    }
+    
+
+.btn-animate::before {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1, 0.1);
+}
+
+.btn-animate:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.btn-animate::after {
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.btn-animate:hover::after {
+  transform: scale(1, .1);
+  opacity: 0;
+}
+    
+
+.content-body{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    padding: 0 0 2em 2em;
+    right: 0%;
+}
+.header1-eng{
+    position: fixed;
+    top:30%;
+    right: 0%;
+}
+    .header1-eng > h1{
+        color: #f4f4f4;
+        position: relative;
+        display: block;
+        text-align: center;
+        padding-right: 5rem;
+        padding-top: 3rem;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .header1-eng:hover > h1{
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .content{
+        padding-top: 55rem;
+        padding-bottom: 15%;
+    }
+    .content > p{
+        position: relative;
+        color: #7e7e7e;
+        padding-top: 1em;
+        padding-right: 3em;
+    }
+
+.follow-me{
+        visibility: hidden;
+}
+    .follow-me > h3{
+        color: #2e2e2e;
+        text-align: center;
+    }
+.cf{
+    overflow: hidden;
+}
+}
+
+
+/* =========================================================
+ * Loading Animation
+ * =========================================================*/
+
+	/* PAINEL */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: hsl(0,0%,95%);
+        z-index: 1000;
+    }
+
+        #loader-wrapper .loader-section.section-left {
+            left: 0;
+        } 
+
+        #loader-wrapper .loader-section.section-right {
+            right: 0;
+        }
+
+/* DOT LOADING*/
+.container {
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    z-index: 1001;
+    position: absolute;
+    filter: url("#goo");
+    transform: translate(-50%, -50%);
+    animation: rotate-move 2s ease-in-out infinite;
+}
+
+.dot {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.dot-3 {
+    background-color: #000000;
+    animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+}
+
+.dot-2 {
+    background-color: #000000;
+    animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+}
+
+.dot-1 {
+    background-color: #000000;
+    animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+}
+
+@keyframes dot-3-move {
+    20% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: translateY(-18px) scale(0.45);
+    }
+
+    60% {
+        transform: translateY(-90px) scale(0.45);
+    }
+
+    80% {
+        transform: translateY(-90px) scale(0.45);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes dot-2-move {
+    20% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: translate(-16px, 12px) scale(0.45);
+    }
+
+    60% {
+        transform: translate(-80px, 60px) scale(0.45);
+    }
+
+    80% {
+        transform: translate(-80px, 60px) scale(0.45);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes dot-1-move {
+    20% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: translate(16px, 12px) scale(0.45);
+    }
+
+    60% {
+        transform: translate(80px, 60px) scale(0.45);
+    }
+
+    80% {
+        transform: translate(80px, 60px) scale(0.45);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes rotate-move {
+    55% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes index {
+    0%, 100% {
+        z-index: 3;
+    }
+
+    33.3% {
+        z-index: 2;
+    }
+
+    66.6% {
+        z-index: 1;
+    }
+}
+
+/*#region CLOSING ALL AND SHOW*/
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%); /* IE 9 */
+    transform: translateX(-100%); /* Firefox 16+, IE 10+, Opera */
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+.loaded .container {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out; /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.3s ease-out; /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all 0.3s 1s ease-out; /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.3s 1s ease-out; /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
